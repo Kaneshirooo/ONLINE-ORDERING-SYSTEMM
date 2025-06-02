@@ -1,0 +1,638 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+.navbar-dark {
+  background-color: #432818 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f8f5f2 !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: #432818;
+  color: #f8f5f2;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #f8f5f2;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f5b041;
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.product-card .description {
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Coffee Card Styling */
+.coffee-card {
+  background-color: #f5ebe0;
+  border-left: 4px solid #6f4e37;
+}
+
+.coffee-card .card-body {
+  background-color: #f5ebe0;
+}
+
+.coffee-card .card-title {
+  color: #6f4e37;
+}
+
+.coffee-card::before {
+  content: "☕";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* Pastry Card Styling */
+.pastry-card {
+  background-color: #fef6e4;
+  border-left: 4px solid #f5b041;
+}
+
+.pastry-card .card-body {
+  background-color: #fef6e4;
+}
+
+.pastry-card .card-title {
+  color: #d35400;
+}
+
+.pastry-card::before {
+  content: "🥐";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* Category Indicator */
+.category-indicator {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.coffee-indicator {
+  background-color: #6f4e37;
+  color: white;
+}
+
+.pastry-indicator {
+  background-color: #f5b041;
+  color: white;
+}
+
+/* Product Details */
+.product-detail-image {
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-detail-image:hover {
+  transform: scale(1.02);
+}
+
+.price-large {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 1rem 0;
+}
+
+/* Cart */
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cart-item-image:hover {
+  transform: scale(1.1);
+}
+
+/* Order */
+.order-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Dashboard */
+.product-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Category Cards */
+.category-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-card:hover .card {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-category-card .card {
+  background-color: #f5ebe0;
+  border-left: 4px solid #6f4e37;
+}
+
+.coffee-category-card h3 {
+  color: #6f4e37;
+}
+
+.pastry-category-card .card {
+  background-color: #fef6e4;
+  border-left: 4px solid #f5b041;
+}
+
+.pastry-category-card h3 {
+  color: #d35400;
+}
+
+.category-image {
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Summary Items */
+.summary-items {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6f4e37 #f5ebe0;
+}
+
+.summary-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.summary-items::-webkit-scrollbar-track {
+  background: #f5ebe0;
+  border-radius: 10px;
+}
+
+.summary-items::-webkit-scrollbar-thumb {
+  background-color: #6f4e37;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5a3f2d;
+  border-color: #5a3f2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+  color: #6f4e37;
+  border-color: #6f4e37;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Products Section */
+.featured-products {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #6f4e37;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-detail-image {
+    max-height: 300px;
+  }
+
+  .price-large {
+    font-size: 1.5rem;
+  }
+}
+
+/* Payment Methods */
+#onlinePaymentDetails {
+  background-color: #f8f5f2;
+  border-color: #dee2e6 !important;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+#onlinePaymentDetails h6 {
+  color: #432818;
+  margin-bottom: 1rem;
+}
+
+/* Credit Card Input Styling */
+#cardNumber,
+#expDate,
+#cvv {
+  font-family: monospace;
+  letter-spacing: 0.1em;
+}
+
+/* Payment Method Selection */
+.form-check-input:checked + .form-check-label {
+  font-weight: bold;
+  color: #432818;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .card-body {
+  padding: 1.5rem;
+}
+
+.dashboard-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Stats Cards */
+.stats-card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+.stats-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Loyalty Badge */
+.loyalty-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loyalty-bronze {
+  background-color: #cd7f32;
+  color: white;
+}
+
+.loyalty-silver {
+  background-color: #c0c0c0;
+  color: white;
+}
+
+.loyalty-gold {
+  background-color: #ffd700;
+  color: black;
+}
+
+.loyalty-platinum {
+  background-color: #e5e4e2;
+  color: black;
+  background-image: linear-gradient(45deg, #e5e4e2, #b9b8b7);
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .receipt {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #432818;
+  color: #f8f5f2;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Product Badge */
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-badge {
+  background-color: #6f4e37;
+  color: white;
+}
+
+.pastry-badge {
+  background-color: #f5b041;
+  color: white;
+}
+
+/* Form Styling */
+.form-control:focus {
+  border-color: #6f4e37;
+  box-shadow: 0 0 0 0.25rem rgba(111, 78, 55, 0.25);
+}
+
+.input-group-text {
+  background-color: #f5ebe0;
+  border-color: #ced4da;
+  color: #6f4e37;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f5ebe0;
+  border-bottom: none;
+  font-weight: 600;
+}
+
+/* Table Styling */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th {
+  background-color: #f5ebe0;
+  color: #432818;
+  font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(111, 78, 55, 0.05);
+}
+
+/* Profile Picture */
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5ebe0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6f4e37;
+  border-radius: 10px;
+}
+
+/* User Avatar in Header */
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
